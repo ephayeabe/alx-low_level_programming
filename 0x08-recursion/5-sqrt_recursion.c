@@ -22,9 +22,10 @@ int squre_root_wrapper(int n, int min, int max) {
     if (guess_squared == n)
         return guess;
     else if (guess_squared < n)
-        squre_root_wrapper(n, guess + 1, max);
+       return squre_root_wrapper(n, guess + 1, max);
     else
-        squre_root_wrapper(n, min, guess - 1);
+       return squre_root_wrapper(n, min, guess - 1);
 
 }
+
 
