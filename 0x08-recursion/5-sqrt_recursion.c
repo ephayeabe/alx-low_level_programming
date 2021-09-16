@@ -15,11 +15,13 @@ int _sqrt_recursion(int n) {
 }
 
 int squre_root_wrapper(int n, int min, int max) {
-    if (max < min)
+	 int guess; 
+	 int guess_squared;
+    if (max < min){
         return -1;
-    int guess; 
+	}
 	guess=(min + max) / 2;
-    int guess_squared = guess * guess;
+    guess_squared= guess * guess;
     if (guess_squared == n)
         return guess;
     else if (guess_squared < n)
