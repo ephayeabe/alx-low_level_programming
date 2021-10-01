@@ -3,7 +3,7 @@
  * Auth: Ephrem Abebe
  */
 
-#include "holberton.h"
+#include "main.h"
 
 /**
  * memset - Fills the first n bytes of the memory area
