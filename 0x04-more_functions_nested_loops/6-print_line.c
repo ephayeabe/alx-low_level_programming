@@ -1,20 +1,23 @@
-#include"main.h"
-#include<stdio.h>
-void print_line(int n){
-	if(n<=0){
-		printf("\n");
-		return;
-	}
-	for(int i=0;i<n;i++){	
-		printf("_");
-	}
-	printf("\n");
-}
-int main(void)
+/*
+ * File: 6-print_line.c
+ * Auth: Ephrem Abebe
+ */
+
+#include "main.h"
+
+/**
+ * print_line - Draws a straight line using the character _.
+ * @n: The number of _ characters to be printed.
+ */
+void print_line(int n)
 {
-    print_line(0);
-    print_line(2);
-    print_line(10);
-    print_line(-4);
-    return (0);
+	int len;
+
+	if (n > 0)
+	{
+		for (len = 0; len < n; len++)
+			_putchar('_');
+	}
+
+	_putchar('\n');
 }

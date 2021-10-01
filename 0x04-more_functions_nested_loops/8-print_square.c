@@ -1,17 +1,30 @@
-#include"main.h"
-#include<stdio.h>
-void print_square(int size){
-	for(int i=0;i<size;i++){
-		for(int j=0;j<size;j++){
-			printf("#");
-		}
-		printf("\n");
-	}
-}
-int main(void)
+/*
+ * File: 8-print_square.c
+ * Auth: Ephrem Abebe
+ */
+
+#include "holberton.h"
+
+/**
+ * print_square - Prints a squareusing the character #.
+ * @size: The size of the square.
+ */
+void print_square(int size)
 {
-    print_square(2);
-    print_square(10);
-    print_square(0);
-    return (0);
+	int hgt, wid;
+
+	if (size > 0)
+	{
+		for (hgt = 0; hgt < size; hgt++)
+		{
+			for (wid = 0; wid < size; wid++)
+				_putchar('#');
+
+			if (hgt == size - 1)
+				continue;
+			_putchar('\n');
+		}
+	}
+
+	_putchar('\n');
 }

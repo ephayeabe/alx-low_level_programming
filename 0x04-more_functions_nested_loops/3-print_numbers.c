@@ -1,12 +1,19 @@
+/*
+ * File: 3-print_numbers.c
+ * Auth: Ephrem Abebe
+ */
+
 #include "main.h"
-#include<stdio.h>
-void print_numbers(void){
-	for(int i=0;i<=9;i++){
-		printf("%d",i);
-	}
-}
-int main(void)
+
+/**
+ * print_numbers - Prints the numbers from 0-9.
+ */
+void print_numbers(void)
 {
-    print_numbers();
-    return (0);
+	int num;
+
+	for (num = 0; num <= 9; num++)
+		_putchar((num % 10) + '0');
+
+	_putchar('\n');
 }

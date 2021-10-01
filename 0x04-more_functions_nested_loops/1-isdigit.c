@@ -1,20 +1,21 @@
-#include"main.h"
-#include<stdio.h>
-#include<ctype.h>
+/*
+ * File: 1-isdigit.c
+ * Auth: Ephrem Abebe
+ */
 
-int _isdigit(int c){
-		if(isdigit(c))
-			return 1;
-		else
-			return 0;
-	
-}
-int main(){
-	char c;
+#include "main.h"
 
-    c = '0';
-    printf("%c: %d\n", c, _isdigit(c));
-    c = 'a';
-    printf("%c: %d\n", c, _isdigit(c));
-    return (0);
+/**
+ * _isdigit - Checks for a digit (0-9).
+ * @c: The number to be checked.
+ *
+ * Return: 1 if the number is a digit, 0 otherwise.
+ */
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+
+	else
+		return (0);
 }
