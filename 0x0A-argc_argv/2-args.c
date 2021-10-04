@@ -1,11 +1,13 @@
-#include<stdio.h>
-
-int main (int argc, char *argv[])
+#include <stdio.h>
+/**
+ * main - a program that prints all arguments it receives.
+ * @argc: arguement count
+ * @argv: array of pointers to arguement strings
+ * Return: 0
+ **/
+int main(int argc, char *argv[])
 {
-	int count;
-	for (count = 0; count < argc; count++)
-	{
-	  printf("%s\n",  argv[count]);
-	}
-	return 0;
+	while (argc--)
+		printf("%s\n", *argv++);
+	return (0);
 }
