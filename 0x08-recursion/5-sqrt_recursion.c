@@ -1,34 +1,30 @@
-
-
-
 #include "main.h"
 
 /**
- * main - check the code
+ * sqrt_check - checks for the square root of c
+ * @g:guess at sqrt
+ * @c: number to find sqrt of
  *
- * Return: Always 0.
+ * Return: -1 or sqrt of c
  */
-int squre_root_wrapper(int n, int min, int max);
-
-int _sqrt_recursion(int n) {
-    return squre_root_wrapper(n, 1, n);
+int sqrt_check(int g, int c)
+{
+	if (g * g == c)
+		return (g);
+	if (g * g > c)
+		return (-1);
+	return (sqrt_check(g + 1, c));
 }
 
-int squre_root_wrapper(int n, int min, int max) {
-	 int guess; 
-	 int guess_squared;
-    if (max < min){
-        return -1;
-	}
-	guess=(min + max) / 2;
-    guess_squared= guess * guess;
-    if (guess_squared == n)
-        return guess;
-    else if (guess_squared < n)
-       return squre_root_wrapper(n, guess + 1, max);
-    else
-       return squre_root_wrapper(n, min, guess - 1);
-
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: integer to find sqrt of
+ *
+ * Return: natural square root or -1
+ */
+int _sqrt_recursion(int n)
+{
+	if (n == 0)
+		return (0);
+	return (sqrt_check(1, n));
 }
-
-
