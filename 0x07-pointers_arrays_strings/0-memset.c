@@ -1,10 +1,4 @@
-/*
- * File: 0-memset.c
- * Auth: Ephrem Abebe
- */
-
-#include "main.h"
-
+#include "holberton.h"
 /**
  *_memset - fill a block of memory with a specific value
  *@s: starting address of memory to be filled
@@ -13,13 +7,15 @@
  *
  *Return: changed array with new value for n bytes
  */
-void *_memset(void *s, int c, size_t n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int index;
-	unsigned char *memory = s, value = c;
+	int i = 0;
 
-	for (index = 0; index < n; index++)
-		memory[index] = value;
-
-	return (memory);
+	while (n > 0)
+	{
+		s[i] = b;
+		i++;
+		n--;
+	}
+	return (s);
 }
