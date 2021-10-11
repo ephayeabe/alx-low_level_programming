@@ -4,7 +4,7 @@
  */
 
 #include<stdio.h>
-#include "holberton.h"
+#include "main.h"
 /**
  *_strcpy - update value.
  *@dest: value to be evaluate.
