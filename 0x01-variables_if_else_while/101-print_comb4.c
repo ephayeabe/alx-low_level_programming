@@ -1,8 +1,3 @@
-/*
- * File: 101-print_comb4.c
- * Auth: Ephrem Abebe
- */
- 
 #include <stdio.h>
 
 /**
