@@ -1,5 +1,5 @@
+#include <stdlib.h>
 #include "lists.h"
-#include<stdlib.h>
 
 /**
  * add_dnodeint - add a new node at the beginning of the linked list
@@ -10,10 +10,11 @@
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
+	dlistint_t *temp;
+	
 	if (head == NULL)
 		return (NULL);
-	dlistint_t *temp = (dlistint_t *)malloc(sizeof(dlistint_t));
-
+	temp= (dlistint_t *)malloc(sizeof(dlistint_t));
 	if (temp == NULL)
 		return (NULL);
 	temp->n = n;
@@ -24,7 +25,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	else
 	{
 		temp->next = *head;
-		*head->prev = temp;
+		(*head)->prev = temp;
 		*head = temp;
 	}
 
